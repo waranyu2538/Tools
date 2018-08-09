@@ -1,0 +1,15 @@
+ALTER TABLE person ADD address CHAR(255) // สร้าง table ขึ้นมาใหม่ ใน person
+ALTER TABLE person ADD road CHAR(255) // สร้าง table ขึ้นมาใหม่ใน person
+
+ข้างล่าง update ข้อมูล โดยเรียงตาม id จาก table house
+UPDATE person
+INNER JOIN house
+ON person.house_id = house.house_id
+
+SET person.address = house.address,
+ 	person.road = house.road,
+	person.house_id = house.house_id
+ 	
+
+
+ 
